@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background:linear-gradient(135deg,#141E30,#243B55);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculator{
+    width:360px;
+    background:#1f2937;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
 }
 
-.App-link {
-  color: #61dafb;
+.display input{
+    width:100%;
+    height:75px;
+    border:none;
+    outline:none;
+    background:#111827;
+    color:white;
+    font-size:2rem;
+    text-align:right;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.buttons button{
+    height:65px;
+    border:none;
+    border-radius:15px;
+    background:#374151;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.buttons button:hover{
+    transform:translateY(-3px);
+    background:#4b5563;
+}
+
+.buttons button:active{
+    transform:scale(.95);
+}
+
+.operator{
+    background:#f59e0b !important;
+}
+
+.operator:hover{
+    background:#d97706 !important;
+}
+
+.equal{
+    background:#10b981 !important;
+}
+
+.equal:hover{
+    background:#059669 !important;
+}
+
+.clear{
+    background:#3b82f6 !important;
+}
+
+.clear:hover{
+    background:#2563eb !important;
+}
+
+.delete{
+    background:#ef4444 !important;
+}
+
+.delete:hover{
+    background:#dc2626 !important;
+}
+
+.zero{
+    grid-column:span 2;
 }
